@@ -1,4 +1,3 @@
-import { VERSION } from '@opentelemetry/core';
 import { InstrumentationBase, InstrumentationNodeModuleDefinition } from '@opentelemetry/instrumentation';
 import { flush, logger, vercelWaitUntil } from '@sentry/core';
 import type * as http from 'node:http';
@@ -25,7 +24,7 @@ type Https = typeof https;
  */
 export class SentryHttpInstrumentationBeforeOtel extends InstrumentationBase {
   public constructor() {
-    super('@sentry/instrumentation-http-before-otel', VERSION, {});
+    super('@sentry/instrumentation-http-before-otel', "2.0.0", {});
   }
 
   // eslint-disable-next-line jsdoc/require-jsdoc
